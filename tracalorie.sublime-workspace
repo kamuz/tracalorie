@@ -1,0 +1,299 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"appen",
+				"appendChild"
+			],
+			[
+				"task",
+				"taskList"
+			],
+			[
+				"appe",
+				"appendChild"
+			],
+			[
+				"Clas",
+				"className"
+			],
+			[
+				"ap",
+				"appendChild"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"get",
+				"getItem"
+			],
+			[
+				"local",
+				"localStorage"
+			],
+			[
+				"inner",
+				"innerText"
+			],
+			[
+				"back",
+				"backgroundColor"
+			],
+			[
+				"remo",
+				"removeAttribute"
+			],
+			[
+				"remov",
+				"removeChild"
+			],
+			[
+				"querySele",
+				"querySelectorAll"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"lsp",
+				"LSP: Rename"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Server/domains/github.loc/tracalorie.loc"
+	],
+	"file_history":
+	[
+		"/D/Server/domains/sandbox.loc/index.html",
+		"/d/Server/domains/github.loc/study.loc/content/javascript/readme.md",
+		"/d/Server/domains/github.loc/study.loc/content/javascript/content/js-patterns.md",
+		"/D/Server/domains/github.loc/study.loc/content/frontend/content/practice-tasks-list.md",
+		"/D/Server/domains/sandbox.loc/js/main.js",
+		"/d/Server/domains/github.loc/study.loc/content/javascript/content/js-dom.md",
+		"/d/Server/domains/github.loc/study.loc/content/frontend/readme.md",
+		"/d/Server/domains/github.loc/study.loc/content/javascript/content/js-localstorage.md",
+		"/d/Server/domains/github.loc/study.loc/content/javascript/content/js-json.md",
+		"/d/Server/domains/github.loc/study.loc/content/javascript/content/js-events.md",
+		"/C/Users/Vladimir/Desktop/question.md",
+		"/d/Server/domains/github.loc/study.loc/readme.md",
+		"/C/Users/Vladimir/AppData/Roaming/Sublime Text/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Users/Vladimir/AppData/Local/Temp/_tc/swiper.min.js",
+		"/C/Users/Vladimir/AppData/Local/Temp/_tc/reveal.js-master/package.json",
+		"/C/Users/Vladimir/AppData/Local/Temp/_tc/react.production.min.js",
+		"/C/Users/Vladimir/AppData/Local/Temp/_tc/mediaelement-mediaelement-ea32c54/package.js",
+		"/C/Users/Vladimir/AppData/Local/Temp/_tc/fullPage.js-master/package.json",
+		"/C/Users/Vladimir/AppData/Local/Temp/Temp1_materialize-v1.0.0.zip/materialize/README.md",
+		"/C/Users/Vladimir/AppData/Roaming/Sublime Text/Packages/User/Terminal.sublime-settings",
+		"/D/Server/domains/sandbox.loc/main.js",
+		"/D/Server/domains/sandbox.loc/.gitignore",
+		"/D/Server/domains/sandbox.loc/css/materialize.min.css"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"d:\\Server\\domains\\github.loc\\study.loc\\content\\javascript\\content,<project filters>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"stringify",
+			"true",
+			"clearBtn",
+			"stopPropagation",
+			"client",
+			"e",
+			"\\",
+			"*main.js*",
+			"replaceChild"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.SFTP":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tracalorie.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"dom",
+				"content\\javascript\\content\\js-dom.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Server\\domains\\github.loc\\personal.loc\\personal.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
