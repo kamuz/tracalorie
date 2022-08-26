@@ -33,7 +33,8 @@ const ItemCtrl = (function(){
 const UICtrl = (function(){
 	// Define selectors
 	const UISelectors = {
-		itemList: '#item-list'
+		itemList: '#item-list',
+		addBtn: '.add-btn',
 	}
 	// Public methods
 	return {
@@ -50,12 +51,30 @@ const UICtrl = (function(){
 
 			// Insert list items
 			document.querySelector(UISelectors.itemList).innerHTML = html;
+		},
+		getSelectors: function(){
+			return UISelectors;
 		}
 	}
 })();
 
 // App Controller
 const AppCtrl = (function(ItemCtrl, UICtrl){
+	// Load event listeners
+	const loadEventListeners = function(){
+		// Get UI selectors
+		const UISelectors = UICtrl.getSelectors();
+
+		// Add item event
+		document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
+	};
+
+	// Add item submit
+	const itemAddSubmit = function(e){
+		console.log('Item added');
+		e.preventDefault();
+	}
+
 	// Public methods
 	return {
 		init: function(){
@@ -65,6 +84,9 @@ const AppCtrl = (function(ItemCtrl, UICtrl){
 
 			// Populate list with items
 			UICtrl.populateItemList(items);
+
+			// Load event listeners
+			loadEventListeners();
 		}
 	}
 })(ItemCtrl, UICtrl);
