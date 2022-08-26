@@ -31,9 +31,26 @@ const ItemCtrl = (function(){
 
 // UI Controller
 const UICtrl = (function(){
+	// Define selectors
+	const UISelectors = {
+		itemList: '#item-list'
+	}
 	// Public methods
 	return {
+		populateItemList: function(items){
+			let html = '';
+			items.forEach(function(item){
+				// console.log(item);
+				html += `<li class="collection-item" id="item-${item.id}">
+				<strong>${item.name}: </strong> <em>${item.calories} Calories</em>
+				<a href="#" class="secondary-content">
+					<i class="edit-item fa fa-pencil"></i>
+				</a>`;
+			});
 
+			// Insert list items
+			document.querySelector(UISelectors.itemList).innerHTML = html;
+		}
 	}
 })();
 
@@ -45,6 +62,9 @@ const AppCtrl = (function(ItemCtrl, UICtrl){
 			// Fetch items from data structure
 			const items = ItemCtrl.getItems();
 			console.log(items);
+
+			// Populate list with items
+			UICtrl.populateItemList(items);
 		}
 	}
 })(ItemCtrl, UICtrl);
