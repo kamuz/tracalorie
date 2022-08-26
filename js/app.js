@@ -28,6 +28,25 @@ const ItemCtrl = (function(){
 		},
 		addItem: function(name, calories){
 			console.log(name, calories);
+
+			let ID;
+			// Create ID
+			if(data.items.length > 0){
+				ID = data.items[data.items.length - 1].id + 1;
+			} else {
+				ID = 0;
+			}
+
+			// Calories to number
+			calories = parseInt(calories);
+
+			// Create new item
+			newItem = new Item(ID, name, calories);
+
+			// Add to items array
+			data.items.push(newItem);
+
+			return newItem;
 		}
 	}
 })();
