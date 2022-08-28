@@ -113,6 +113,9 @@ const AppCtrl = (function(ItemCtrl, UICtrl){
 			const newItem = ItemCtrl.addItem(input.name, input.calories);
 		}
 
+		// Print new items
+		console.log(ItemCtrl.logData());
+
 	}
 
 	// Public methods
