@@ -69,6 +69,9 @@ const ItemCtrl = (function(){
 				}
 			});
 			return found;
+		},
+		setCurrentItem: function(item){
+			data.currentItem = item;
 		}
 	}
 })();
@@ -209,8 +212,10 @@ const AppCtrl = (function(){
 			// Get the actual ID
 			const id = parseInt(listIdArr[1]);
 			console.log(id);
+			// Get item to edit
 			const itemToEdit = ItemCtrl.getItemById(id);
 			console.log(itemToEdit);
+			ItemCtrl.setCurrentItem(itemToEdit);
 		}
 		e.preventDefault();
 	}
