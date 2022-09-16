@@ -72,6 +72,9 @@ const ItemCtrl = (function(){
 		},
 		setCurrentItem: function(item){
 			data.currentItem = item;
+		},
+		getCurrentItem: function(){
+			return data.currentItem;
 		}
 	}
 })();
@@ -147,6 +150,10 @@ const UICtrl = (function(){
 			document.querySelector(UISelectors.deleteBtn).style.display = 'none';
 			document.querySelector(UISelectors.backBtn).style.display = 'none';
 			document.querySelector(UISelectors.addBtn).style.display = 'inline';
+		},
+		addItemToForm: function(){
+			document.querySelector(UISelectors.itemNameInput).value = ItemCtrl.getCurrentItem().name;
+			document.querySelector(UISelectors.itemCaloriesInput).value = ItemCtrl.getCurrentItem().calories;
 		}
 	}
 })();
@@ -216,6 +223,8 @@ const AppCtrl = (function(){
 			const itemToEdit = ItemCtrl.getItemById(id);
 			console.log(itemToEdit);
 			ItemCtrl.setCurrentItem(itemToEdit);
+			// Add item to form
+			UICtrl.addItemToForm();
 		}
 		e.preventDefault();
 	}
