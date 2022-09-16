@@ -147,6 +147,9 @@ const AppCtrl = (function(){
 
 		// Add item event
 		document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
+
+		// Edit item event
+		document.querySelector(UISelectors.itemList).addEventListener('click', itemUpdateSubmit);
 	};
 
 	// Add item submit
@@ -182,10 +185,28 @@ const AppCtrl = (function(){
 
 	}
 
+	// Edit item submit
+	itemUpdateSubmit = function(e){
+		console.log(e.target);
+		if(e.target.classList.contains('edit-item')){
+			console.log('Edit item');
+			// Get list item ID
+			const listId = e.target.parentNode.parentNode.id;
+			console.log(listId);
+			// Break into an array
+			const listIdArr = listId.split('-');
+			console.log(listIdArr);
+			// Get the actual ID
+			const id = parseInt(listIdArr[1]);
+			console.log(id);
+		}
+		e.preventDefault();
+	}
+
 	// Public methods
 	return {
 		init: function(){
-			// Clear edit state and hide buttons
+			// Clear edit state and hide buttons on init
 			UICtrl.clearEditState();
 
 			// Fetch items from data structure
