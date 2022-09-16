@@ -59,6 +59,16 @@ const ItemCtrl = (function(){
 
 			// Set total calories in data structure
 			return data.totalCalories = total;
+		},
+		getItemById: function(id){
+			let found = null;
+			// Loop through items
+			data.items.forEach(function(item){
+				if(item.id === id){
+					found = item;
+				}
+			});
+			return found;
 		}
 	}
 })();
@@ -199,6 +209,8 @@ const AppCtrl = (function(){
 			// Get the actual ID
 			const id = parseInt(listIdArr[1]);
 			console.log(id);
+			const itemToEdit = ItemCtrl.getItemById(id);
+			console.log(itemToEdit);
 		}
 		e.preventDefault();
 	}
