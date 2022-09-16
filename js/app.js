@@ -30,8 +30,8 @@ const ItemCtrl = (function(){
 		addItem: function(name, calories){
 			console.log(name, calories);
 
-			let ID;
 			// Create ID
+			let ID;
 			if(data.items.length > 0){
 				ID = data.items[data.items.length - 1].id + 1;
 			} else {
@@ -124,6 +124,9 @@ const UICtrl = (function(){
 		},
 		showTotalCalories: function(totalCalories){
 			document.querySelector(UISelectors.totalCalories).textContent = totalCalories;
+		},
+		clearEditState: function(){
+			UICtrl.clearInputs();
 		}
 	}
 })();
