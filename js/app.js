@@ -69,6 +69,9 @@ const UICtrl = (function(){
 	const UISelectors = {
 		itemList: '#item-list',
 		addBtn: '.add-btn',
+		updateBtn: '.update-btn',
+		deleteBtn: '.delete-btn',
+		backBtn: '.back-btn',
 		itemNameInput: '#item-name',
 		itemCaloriesInput: '#item-calories',
 		totalCalories: '.total-calories'
@@ -127,6 +130,10 @@ const UICtrl = (function(){
 		},
 		clearEditState: function(){
 			UICtrl.clearInputs();
+			document.querySelector(UISelectors.updateBtn).style.display = 'none';
+			document.querySelector(UISelectors.deleteBtn).style.display = 'none';
+			document.querySelector(UISelectors.backBtn).style.display = 'none';
+			document.querySelector(UISelectors.addBtn).style.display = 'inline';
 		}
 	}
 })();
@@ -178,6 +185,9 @@ const AppCtrl = (function(){
 	// Public methods
 	return {
 		init: function(){
+			// Clear edit state and hide buttons
+			UICtrl.clearEditState();
+
 			// Fetch items from data structure
 			const items = ItemCtrl.getItems();
 			console.log(items);
