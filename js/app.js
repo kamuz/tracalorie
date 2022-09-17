@@ -196,6 +196,8 @@ const AppCtrl = (function(){
 		document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
 		// Update item event
 		document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
+		// Back button event
+		document.querySelector(UISelectors.backBtn).addEventListener('click', UICtrl.clearEditState);
 	};
 	// Add item submit
 	const itemAddSubmit = function(e){
