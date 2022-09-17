@@ -60,6 +60,18 @@ const ItemCtrl = (function(){
 		},
 		getCurrentItem: function(){
 			return data.currentItem;
+		},
+		updateItem: function(name, calories){
+			// Calories to number
+			calories = parseInt(calories);
+			let found = null;
+			data.items.forEach(function(item){
+				if(item.id === data.currentItem.id){
+					item.name = name;
+					item.calories = calories;
+					found = item;
+				}
+			});
 		}
 	}
 })();
@@ -157,8 +169,17 @@ const AppCtrl = (function(){
 		const UISelectors = UICtrl.getSelectors();
 		// Add item event
 		document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
+		// Disable submit on enter
+		document.addEventListener('keypress', function(e){
+			// If Enter
+			if(e.keyCode === 13 || e.which === 13){
+				e.preventDefault();
+			}
+		})
 		// Edit item event
 		document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
+		// Update item event
+		document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
 	};
 	// Add item submit
 	const itemAddSubmit = function(e){
@@ -178,7 +199,7 @@ const AppCtrl = (function(){
 			UICtrl.showTotalCalories(totalCalories);
 		}
 	}
-	// Edit item submit
+	// Click edit item
 	const itemEditClick = function(e){
 		if(e.target.classList.contains('edit-item')){
 			// Get list item ID
@@ -193,6 +214,15 @@ const AppCtrl = (function(){
 			// Add item to form
 			UICtrl.addItemToForm();
 		}
+		e.preventDefault();
+	}
+	// Item update submit
+	const itemUpdateSubmit = function(e){
+		console.log('Update');
+		// Get item input
+		const input = UICtrl.getItemInput();
+		// Update item
+		const updatedItem = ItemCtrl.updateItem(input.name, input.calories);
 		e.preventDefault();
 	}
 	// Public methods
