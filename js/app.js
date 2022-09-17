@@ -158,7 +158,7 @@ const AppCtrl = (function(){
 		// Add item event
 		document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
 		// Edit item event
-		document.querySelector(UISelectors.itemList).addEventListener('click', itemUpdateSubmit);
+		document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
 	};
 	// Add item submit
 	const itemAddSubmit = function(e){
@@ -179,7 +179,7 @@ const AppCtrl = (function(){
 		}
 	}
 	// Edit item submit
-	const itemUpdateSubmit = function(e){
+	const itemEditClick = function(e){
 		if(e.target.classList.contains('edit-item')){
 			// Get list item ID
 			const listId = e.target.parentNode.parentNode.id;
