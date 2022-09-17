@@ -1,4 +1,4 @@
-// Item Controller - data
+// Item Controller - data state
 const ItemCtrl = (function(){
 	// Item Constructor
 	const Item = function(id, name, calories){
@@ -73,6 +73,16 @@ const ItemCtrl = (function(){
 				}
 			});
 			return found;
+		},
+		deleteItem: function(id){
+			// Get ids
+			const ids = data.items.map(function(item){
+				return item.id;
+			});
+			// Get index
+			const index = ids.indexOf(id);
+			// Remove item
+			data.items.splice(index, 1);
 		}
 	}
 })();
@@ -196,6 +206,8 @@ const AppCtrl = (function(){
 		document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
 		// Update item event
 		document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
+		// Delete item event
+		document.querySelector(UISelectors.deleteBtn).addEventListener('click', itemDeleteSubmit);
 		// Back button event
 		document.querySelector(UISelectors.backBtn).addEventListener('click', UICtrl.clearEditState);
 	};
@@ -249,6 +261,14 @@ const AppCtrl = (function(){
 		UICtrl.showTotalCalories(totalCalories);
 		// Clear edit state
 		UICtrl.clearEditState();
+	}
+	// Delete item
+	const itemDeleteSubmit = function(e){
+		e.preventDefault();
+		const currentItem = ItemCtrl.getCurrentItem();
+		console.log(currentItem.id);
+		// Delete item from data structure
+		ItemCtrl.deleteItem(currentItem.id);
 	}
 	// Public methods
 	return {
