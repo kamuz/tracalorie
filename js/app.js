@@ -39,6 +39,17 @@ const StorageCtrl = (function(){
 			});
 			// Update localStorage
 			localStorage.setItem('items', JSON.stringify(items));
+		},
+		deleteItemFromStorage: function(currentItem){
+			let items = JSON.parse(localStorage.getItem('items'));
+			// Find and delete current element
+			items.forEach(function(item, index){
+				if(currentItem.id === item.id){
+					items.splice(index, 1);
+				}
+			});
+			// Update localStorage
+			localStorage.setItem('items', JSON.stringify(items));
 		}
 	}
 })();
@@ -339,6 +350,8 @@ const AppCtrl = (function(){
 		ItemCtrl.deleteItem(currentItem.id);
 		// Delete item from UI
 		UICtrl.deleteListItem(currentItem.id);
+		// Delete from localStorage
+		StorageCtrl.deleteItemFromStorage(currentItem);
 		// Get total calories
 		const totalCalories = ItemCtrl.getTotalCalories();
 		// Add total calories to UI
