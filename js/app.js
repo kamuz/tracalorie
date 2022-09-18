@@ -50,6 +50,9 @@ const StorageCtrl = (function(){
 			});
 			// Update localStorage
 			localStorage.setItem('items', JSON.stringify(items));
+		},
+		clearItemsFromStorage: function(){
+			localStorage.removeItem('items');
 		}
 	}
 })();
@@ -366,6 +369,8 @@ const AppCtrl = (function(){
 		// Remove all items from UI
 		UICtrl.removeItems();
 		// Get total calories
+		// Clear items from from localStorage
+		StorageCtrl.clearItemsFromStorage();
 		const totalCalories = ItemCtrl.getTotalCalories();
 		// Add total calories to UI
 		UICtrl.showTotalCalories(totalCalories);
