@@ -28,6 +28,17 @@ const StorageCtrl = (function(){
 				items = JSON.parse(localStorage.getItem('items'));
 			}
 			return items;
+		},
+		updateItemStorage: function(updatedItem){
+			let items = JSON.parse(localStorage.getItem('items'));
+			// Find and update current element
+			items.forEach(function(item, index){
+				if(updatedItem.id === item.id){
+					items.splice(index, 1, updatedItem);
+				}
+			});
+			// Update localStorage
+			localStorage.setItem('items', JSON.stringify(items));
 		}
 	}
 })();
@@ -311,6 +322,8 @@ const AppCtrl = (function(){
 		const updatedItem = ItemCtrl.updateItem(input.name, input.calories);
 		// Update UI
 		UICtrl.updateListItem(updatedItem);
+		// Update localStorage
+		StorageCtrl.updateItemStorage(updatedItem);
 		// Get total calories
 		const totalCalories = ItemCtrl.getTotalCalories();
 		// Add total calories to UI
